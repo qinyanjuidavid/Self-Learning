@@ -50,3 +50,9 @@ grandList=[["a","b","c"],[1,2,3]]
 print(grandList)
 print(grandList[0])
 print(grandList[1])
+
+#Fibonnacci Series
+a,b=0,1
+while a<10:
+    print(a)
+    a,b=b, a+b
