@@ -31,6 +31,15 @@ class NewCustomer:
     def updateMembership(self,newMembership):
         self.membership_type=newMembership
         return newMembership
+    def printAllCustomers(c):
+        for customer in c:
+            print(f"{customer.name}--> {customer.membership_type}")
+    def __eq__(self, other):
+        if self.name== other.name and self.membership_type==other.membership_type:
+            return True
+        return False
+    def __repr__(self):
+        return f"{self.name} has the {self.membership_type} membership."
 if __name__=="__main__":
     customers=[NewCustomer('Caleb',"Gold"),
                NewCustomer("Brad","Bronze")]
@@ -38,3 +47,8 @@ if __name__=="__main__":
     print(customers[0])
     customers[1].updateMembership("Bronze")
     print(customers[1])#Changing the membership of Brad
+    NewCustomer.printAllCustomers(customers)
+    print(customers[0]==customers[1])
+    print(type(customers[0])==type(customers[1]))#Comparing the type
+    print(id(customers[0])==id(customers[1]))#comparing the memory location
+    print(customers) #Used for representing the entire data
