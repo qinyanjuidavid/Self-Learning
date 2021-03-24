@@ -103,7 +103,6 @@ class HelloPerson:
         self.age=10#Default value
     def PrintOutPut(self):
         return f"My name is {self.name}, I am {self.age} years old"
-
 if __name__=="__main__":
     h6=HelloPerson("Jane Doe")
     print(h6.PrintOutPut())
