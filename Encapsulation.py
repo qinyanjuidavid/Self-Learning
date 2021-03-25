@@ -84,3 +84,20 @@ if __name__=="__main__":
     print(r1.FindArea())
     r2=Rectangle(40,10)
     print(r2.FindArea())
+
+#Inheritance and Encapsulation together
+#??
+
+class Hello:
+    def __init__(self,name):
+        self.a=10
+        self._b=20
+        self.__c=30
+    #A Private variable can be accessed in its the particular class that it belongs
+    def Public_method(self):
+        print(self.a)
+        print(self.__c)
+        print("public")
+if __name__=="__main__":
+    h1=Hello("Jade")
+    h1.Public_method()
