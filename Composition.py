@@ -15,7 +15,7 @@ class Employee:
     def totalSalary(self):
         return self.obj_salary.annualSalary()
 
-
+#Salary is part of the employee
 if __name__=="__main__":
     e1=Employee("Jamie",26,15000,50000)
     print(e1.totalSalary())
