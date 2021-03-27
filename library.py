@@ -1,4 +1,8 @@
 class Base:
+    """
+    kwargs:
+    args:
+    """
     def foo(self):
         return 'foo'
 if __name__=="__main__":
@@ -17,7 +21,7 @@ class Base2(metaclass=BaseMeta):
         print("__init_subclass__",args,kwargs)
         return super().__init_subclass__(cls,*args,**kwargs)
 
-
+#
 # if __name__=="__main__":
 #     b1=Base2()
 #     print(b1.foo())
