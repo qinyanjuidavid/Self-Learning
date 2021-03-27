@@ -1,5 +1,6 @@
 from time import sleep
 class Compute:
+    #This is painful
     # def __call__(self, *args, **kwargs):
     #     rv=[]
     #     for i in range(10000):
