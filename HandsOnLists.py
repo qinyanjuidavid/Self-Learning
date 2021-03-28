@@ -1,0 +1,14 @@
+fruits=['apple','pear',1]
+print(fruits)
+print(type(fruits))
+print(fruits[0])
+fruits.append('strawberry')
+print(fruits)
+fruits.insert(0,"Orange")
+print(fruits)
+fruits.append('blueberry')
+print(fruits)
+fruits[-1]="Mango"
+print(fruits)
+fruits.reverse()
+print(fruits)

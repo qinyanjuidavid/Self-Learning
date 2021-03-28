@@ -20,3 +20,13 @@ for i in range(10):
         # sleep(3)
         print()
     multiply()
+#Iterating by Item
+fruits=['apples','pears','strawberry']
+for fruit in fruits:
+    if fruit == "pears":
+        print(fruit)
+    else:
+        print("not pears")
+
+for i in range(len(fruits)):
+    print("{}. I love {}.".format(i,fruits[i]))
