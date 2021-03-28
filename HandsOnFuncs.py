@@ -14,3 +14,8 @@ def accel(mass,force):
     a=mass*force
     return a
 print(accel(20,5))
+
+def doSomething():
+    print("Hello world")
+    print("My name is day.")
+doSomething()
