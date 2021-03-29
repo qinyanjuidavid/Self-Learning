@@ -34,3 +34,18 @@ def newFunct(n=10,y="John Doe"):
 print(newFunct()) #With arguments its not a must for us to put values when calling the function
 print(newFunct(19,"Jane Doe")) #We can change the default value
 print(newFunct(9))
+
+#Global and local Variables
+var=9
+loop=True
+def func(x=5):
+    global loop#Changing the global variable in the function
+    newVar=7
+    loop=False
+    print(loop)#Local
+    if x==5:
+        # print(var) Global Variable it can be used anywhere in the program
+        return newVar
+print(func())
+# print(x) x is local to the function
+print(loop) #Global
