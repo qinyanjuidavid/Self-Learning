@@ -11,3 +11,13 @@ print(name.upper()) #Changes the string to upper case
 name="JOHN DOE"
 print(name.split()) #Changes the string to a string
 print(type(name.split()))
+
+#Count() and find() methodss
+s="Hello"
+print(s.find('o'))
+print(s.find('l'))
+print(s.find('s'))#Python does not find s
+
+print(s.count('h'))
+print(s.count('l'))
+print(s.count('z'))#Zero 'z'
