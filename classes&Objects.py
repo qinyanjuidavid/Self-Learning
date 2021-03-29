@@ -89,7 +89,7 @@ class Car(Vehicle):
     def beep(self):
         print("Beep beep")
 if __name__=="__main__":
-    c1=Car()
+    c1=Car(120,100,5,"Yello")
 class Truck(Car):
     def __init__(self,tires,price,gas,color):
         super().__init__(price,gas,color)
@@ -97,4 +97,20 @@ class Truck(Car):
     def beep(self):
         print("Hook Hook")
 if __name__=="__main__":
-    t1=Truck()
+    # t1=Truck()
+
+#Overloading the python default methods
+class Point:
+    def __init__(self,x=0,y=0):
+        self.x=x
+        self.y=y
+        self.coords=(self.x,self.y)
+    def move(self,x,y):
+        self.x+=x
+        self.y+=y
+    def __add__(self, other):
+        return self.x+other.y
+if __name__=="__main__":
+    p1=Point(3,5)
+    p2=Point(5,6)
+    print(p1+p2)
