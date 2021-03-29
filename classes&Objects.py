@@ -43,3 +43,58 @@ if __name__=="__main__":
     print(dog[0].age)
     dog[0].addWeight(6)
     print(dog[0].weight)
+
+#Inheritance
+class Dog:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def speak(self):
+        return "Hi i am {}, and i am {} years old.".format(self.name,self.age)
+    def talk(self,sound="bark"):
+        return "{} {}\'s".format(self.name,sound)
+if __name__=="__main__":
+    d1=Dog("Angie",5)
+    print(d1.speak())
+    print(d1.talk())
+
+class Cat(Dog):
+    def __init__(self,name,age,color):
+        super().__init__(name,age)
+        self.color=color
+    def Trial(self):
+        return "{} I am also {} in color".format(super().speak(),self.color)
+if __name__=="__main__":
+    c1=Cat('Jamie',2,"Brown")
+    print(c1.speak())
+    print(c1.Trial())
+    print(c1.talk("Meows"))
+#Multiple Inheritances
+class Vehicle:
+    def __init__(self,price,gas,color):
+        self.price=price
+        self.gas=gas
+        self.color=color
+    def fillUpTank(self):
+        self.gas=100
+    def emptyTank(self):
+        self.gas=0
+    def gasLeft(self):
+        return self.gas
+
+class Car(Vehicle):
+    def __init__(self,speed,price,gas,color):
+        super().__init__(price,gas,color)
+        self.speed=speed
+    def beep(self):
+        print("Beep beep")
+if __name__=="__main__":
+    c1=Car()
+class Truck(Car):
+    def __init__(self,tires,price,gas,color):
+        super().__init__(price,gas,color)
+        self.tires=self.tires
+    def beep(self):
+        print("Hook Hook")
+if __name__=="__main__":
+    t1=Truck()
