@@ -168,3 +168,27 @@ if __name__=="__main__":
     print(Dog.num_dogs)
     #Static Variables
     Dog.bark(2)
+#Private classes and Public classes
+class __Private:
+    def __init__(self,name):
+        self.name=name
+if __name__=="__main__":
+    pass
+
+class NotPrivate:
+    def __init__(self,name,priv):
+        self.name=name
+        self.__priv=priv
+    def display(self):
+        return "Hello"
+    def __display(self):
+        print(self.__priv)
+    def setDisplay(self,priv):
+        self.__priv=priv
+    def getDisplay(self):
+        return self.__priv
+
+if __name__=="__main__":
+    n1=NotPrivate("Jamie",55)
+    n1.setDisplay(56)
+    print(n1.getDisplay())
