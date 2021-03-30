@@ -143,3 +143,28 @@ if __name__=="__main__":
     print(p1<=p2)
     print(p1==p2)
     print(len(p1))
+
+#Class Methods, Class Variables,static method
+class Dog:
+    dogs=[]
+    def __init__(self,name):
+        self.name=name
+        self.dogs.append(self)
+    @classmethod
+    def num_dogs(cls):
+        return len(cls.dogs)
+    @staticmethod
+    def bark(n):
+        for i in range(n):
+            print("Bark!")
+    def __str__(self):
+        return "{}".format(self.name)
+if __name__=="__main__":
+    d1=Dog("Jamie")
+    d2=Dog("Angie")
+    print(d1.num_dogs)
+    d1.bark(5)
+    print(Dog.dogs)
+    print(Dog.num_dogs)
+    #Static Variables
+    Dog.bark(2)
