@@ -98,6 +98,7 @@ class Truck(Car):
         print("Hook Hook")
 if __name__=="__main__":
     # t1=Truck()
+    pass
 
 #Overloading the python default methods
 class Point:
@@ -108,9 +109,37 @@ class Point:
     def move(self,x,y):
         self.x+=x
         self.y+=y
-    def __add__(self, other):
-        return self.x+other.y
+    def __add__(self, other):#Addition
+        return (self.x+other.x,self.y+other.y)
+    def __mul__(self, other):#Multiplication
+        return (self.x*other.x,self.y*other.y)
+    def __sub__(self, other):#Substraction
+        return (self.x-other.x,self.y-other.y)
+    def __str__(self):#String method
+        return "({},{})".format(self.x,self.y)
+    def __gt__(self, other):#Greater than
+        return self.x>other.y
+    def __ge__(self,other):#Greater than or equal to
+        return self.x>=other.y
+    def __lt__(self, other):#Less than
+        return self.x<other.y
+    def __le__(self,other ):#Less than or equal to
+        return self.x<=other.y
+    def __eq__(self, other):#Equal to
+        return self.x==other.y
+    def __len__(self):
+        return len(str(self.x))
 if __name__=="__main__":
     p1=Point(3,5)
     p2=Point(5,6)
     print(p1+p2)
+    print(p1*p2)
+    print(p1-p2)
+    print(p1)
+    print(p2)
+    print(p1>p2)
+    print(p1>=p2)
+    print(p1<p2)
+    print(p1<=p2)
+    print(p1==p2)
+    print(len(p1))
