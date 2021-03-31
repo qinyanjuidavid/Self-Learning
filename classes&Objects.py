@@ -168,6 +168,7 @@ if __name__=="__main__":
     print(Dog.num_dogs)
     #Static Variables
     Dog.bark(2)
+
 #Private classes and Public classes
 class __Private:
     def __init__(self,name):
