@@ -13,16 +13,18 @@ if __name__=="__main__":
     print(func("Jane Doe",1,2))
 #Example
 class car(object):
-    def __init__(self,make,model,year,condition,kms):
+    def __init__(self,make,model,year,condition="New",kms="0"):
         self.make=make
         self.model=model
         self.year=year
         self.condition=condition
         self.kms=kms
-    def display(self,showAll):
+    def display(self,showAll=True):
         if showAll:
             print("This car is a {} {} from {}, it is {} and has {} kms.".format(self.make,self.model,self.year,self.condition,self.kms))
         else:
             print("This car is a {} {} from {}.".format(self.make,self.model,self.year))
 whip=car("Ford","Fusion",2012,"New",0)
 whip.display(True)
+whip2=car("Ford","Fusion",2013)
+whip2.display(False)
