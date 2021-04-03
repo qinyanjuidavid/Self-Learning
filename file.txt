@@ -1,2 +1,1 @@
-Python is awesome
-I also love Django Framework
+hello!
